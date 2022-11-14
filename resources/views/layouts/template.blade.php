@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Badan Penelitian dan Pembangunan Daerah - Balitbangda</title>
+  <title>@yield ('judul') - Balitbangda</title>
   <meta content="" name="description">
 
   <meta content="" name="keywords">
@@ -14,21 +14,21 @@
 
   <!-- Favicons -->
   <link href="https://balitbangda.kalselprov.go.id/wp-content/themes/balitbangda_red/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="tema/vendor/aos/aos.css" rel="stylesheet">
+  <link href="tema/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="tema/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="tema/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="tema/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="tema/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="tema/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: FlexStart - v1.11.1
@@ -45,7 +45,7 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="#" class="logo d-flex align-items-center">
-        <img src="assets/img/logo-kalsel.png" alt="">
+        <img src="https://balitbangda.kalselprov.go.id/wp-content/themes/balitbangda_red/images/logo.gif" alt="">
         <span>BALITBANGDA</span>
       </a>
 
@@ -631,7 +631,7 @@
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
             <a href="#" class="logo d-flex align-items-center">
-              <img src="assets/img/logo-kalsel.png" alt="">
+              <img src="tema/img/logo-kalsel.png" alt="">
               <span>BALITBANGDA</span>
             </a>
             <p>Badan Penelitan dan Pengembangan Daerah</p>
@@ -686,16 +686,16 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="tema/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="tema/vendor/aos/aos.js"></script>
+  <script src="tema/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="tema/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="tema/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="tema/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="tema/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="tema/js/main.js"></script>
 
 </body>
 
