@@ -14,21 +14,21 @@
 
   <!-- Favicons -->
   <link href="https://balitbangda.kalselprov.go.id/wp-content/themes/balitbangda_red/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://balitbangda.kalselprov.go.id/wp-content/themes/balitbangda_red/favicon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="tema/vendor/aos/aos.css" rel="stylesheet">
-  <link href="tema/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="tema/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="tema/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="tema/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="tema/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="{{asset('tema/vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{asset('tema/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{asset('tema/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{asset('tema/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href="{{asset('tema/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+  <link href="{{asset('tema/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="tema/css/style.css" rel="stylesheet">
+  <link href="{{asset('tema/css/style.css')}}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: FlexStart - v1.11.1
