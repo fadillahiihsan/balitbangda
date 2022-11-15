@@ -410,17 +410,14 @@ Badan Penelitan dan Pengembangan Daerah
           <div class="info-box">
             <i class="bi bi-geo-alt"></i>
             <h3>Alamat</h3>
-            <p>Jl. Trikora Komplek <br>
-                Perkantoran Pemerintah<br>
-                Provinsi Kalimantan Selatan <br>
-                Banjarbaru<br></p>
+            <p>Jl. Dharma Praja I, Komplek Perkantoran Pemerintah Provinsi Kalimantan Selatan Banjarbaru</p>
           </div>
         </div>
         <div class="col-md-6">
           <div class="info-box">
             <i class="bi bi-telephone"></i>
             <h3>Telepon</h3>
-            <p>+62 6969 6969<br>+62 7211 7211</p>
+            <p>05116749271</p>
           </div>
         </div>
         <div class="col-md-6">
@@ -434,7 +431,7 @@ Badan Penelitan dan Pengembangan Daerah
           <div class="info-box">
             <i class="bi bi-clock"></i>
             <h3>Jam Kerja</h3>
-            <p>Senin - Jumat<br>9:00 WITA - 17:00 WITA</p>
+            <p>Senin - Jumat<br>08:00 WITA - 17:00 WITA</p>
           </div>
         </div>
       </div>
@@ -464,7 +461,7 @@ Badan Penelitan dan Pengembangan Daerah
           <div class="col-md-12 text-center">
             <div class="loading">Loading</div>
             <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
+            <div class="sent-message">Pesan kamu telah terkirim. Terima kasih!</div>
 
             <button type="submit">Kirim Pesan</button>
           </div>

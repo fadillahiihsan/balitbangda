@@ -45,7 +45,7 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="/" class="logo d-flex align-items-center">
-        <img src="https://balitbangda.kalselprov.go.id/wp-content/themes/balitbangda_red/images/logo.gif" alt="">
+        <img src="tema/img/logo-kalsel.png" alt="">
         <span>BALITBANGDA</span>
       </a>
 
@@ -103,7 +103,7 @@
                   <li><a href="#">Kegiatan</a></li>
                   <li><a href="#">Serba-Serbi</a></li>
                 </ul>
-                <li class="dropdown"><a href="#"><span>Bidang Ekonomi, SDA dan Teknologi</span> <i class="bi bi-chevron-right"></i></a>
+                <li class="dropdown"><a href="#"><span>Bxidang Ekonomi, SDA dan Teknologi</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Hasil Penelitian dan Pengembangan</a></li>
                   <li><a href="#">Artikel</a></li>
@@ -186,10 +186,7 @@
           <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
             <h4>KANTOR BALITBANG KALSEL</h4>
             <p>
-              Jl. Trikora Komplek <br>
-              Perkantoran Pemerintah<br>
-              Provinsi Kalimantan Selatan <br>
-              Banjarbaru<br>
+            Jl. Dharma Praja I, Komplek Perkantoran Pemerintah Provinsi Kalimantan Selatan Banjarbaru
               <a href="mailto:kalselbalitbangda@gmail.com">kalselbalitbangda@gmail.com</a>
             </p>
 
