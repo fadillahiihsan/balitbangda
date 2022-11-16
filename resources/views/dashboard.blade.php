@@ -124,6 +124,18 @@
               Reports
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/" target="_blank">
+              <span data-feather="link" class="align-text-bottom"></span>
+              Lihat Website
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="log-out" class="align-text-bottom"></span>
+              Log Out
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
