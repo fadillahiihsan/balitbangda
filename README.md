@@ -68,7 +68,7 @@ Buat Dabatase lalu edit di "env"
 
 ## Cara Menjalankan
 - <code>composer update</code>
-- cp .env.example .env
-- php artisan key:generate
-- php artisan migrate --seed
-- php artisan serve
+- <code>cp .env.example .env</code>
+- <code>php artisan key:generate</code>
+- <code>php artisan migrate --seed</code>
+- <code>php artisan serve</code>
