@@ -84,7 +84,7 @@
   <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search">
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="/logout">Sign out</a>
+      <a class="nav-link px-3" href="/login">Sign out</a>
     </div>
   </div>
 </header>
@@ -126,12 +126,12 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/" target="_blank">
-              <span data-feather="chrome" class="align-text-bottom"></span>
+              <span data-feather="link" class="align-text-bottom"></span>
               Lihat Website
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/logout">
+            <a class="nav-link" href="#">
               <span data-feather="log-out" class="align-text-bottom"></span>
               Log Out
             </a>
@@ -145,8 +145,13 @@
         <h1 class="h2">Dashboard</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
             <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
           </div>
+          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+            <span data-feather="calendar" class="align-text-bottom"></span>
+            This week
+          </button>
         </div>
       </div>
 
