@@ -15,8 +15,10 @@ Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'authenticated']);
 Route::get('/logout', [AuthController::class, 'logout']);
 
-// Dashboard
+// Admin
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware('auth');
+Route::get('/berita', [DashboardController::class, 'berita'])->middleware('auth');
+Route::get('/galeri', [DashboardController::class, 'galeri'])->middleware('auth');
 
 
 
