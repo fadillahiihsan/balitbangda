@@ -7,10 +7,10 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Sebelummnya
+## Step 1
 Buat Dabatase lalu edit di "env"
 
-## Cara Menjalankan
+## Step 2
 - <code>composer update</code>
 - <code>cp .env.example .env</code>
 - <code>php artisan key:generate</code>
