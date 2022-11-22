@@ -67,7 +67,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 Buat Dabatase lalu edit di "env"
 
 ## Cara Menjalankan
-- composer update
+- <code>composer update</code>
 - cp .env.example .env
 - php artisan key:generate
 - php artisan migrate --seed
