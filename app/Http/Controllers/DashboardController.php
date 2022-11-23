@@ -10,14 +10,4 @@ class DashboardController extends Controller
     {
         return view('admin.dashboard');
     }
-
-    public function berita()
-    {
-        return view('admin.create-berita');
-    }
-
-    public function galeri()
-    {
-        return view('admin.create-galeri');
-    }
 }

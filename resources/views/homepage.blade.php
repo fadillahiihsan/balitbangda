@@ -138,9 +138,8 @@ Badan Penelitan dan Pengembangan Daerah
         <img src="{{ asset ('/tema/img/portfolio/portfolio-1.jpg') }}" class="img-fluid" alt="">
         <div class="portfolio-info">
           <h4>App 1</h4>
-          <p>App</p>
           <div class="portfolio-links">
-            <a href="{{ asset ('/tema/img/portfolio/portfolio-1.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
+            <a href="{{ asset ('/tema/img/portfolio/portfolio-1.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i class="bi bi-eye"></i></a>
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
         </div>
@@ -152,9 +151,8 @@ Badan Penelitan dan Pengembangan Daerah
         <img src="{{ asset ('/tema/img/portfolio/portfolio-2.jpg') }}" class="img-fluid" alt="">
         <div class="portfolio-info">
           <h4>Web 3</h4>
-          <p>Web</p>
           <div class="portfolio-links">
-            <a href="{{ asset ('/tema/img/portfolio/portfolio-2.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
+            <a href="{{ asset ('/tema/img/portfolio/portfolio-2.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-eye"></i></a>
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
         </div>
@@ -166,9 +164,8 @@ Badan Penelitan dan Pengembangan Daerah
         <img src="{{ asset ('/tema/img/portfolio/portfolio-3.jpg') }}" class="img-fluid" alt="">
         <div class="portfolio-info">
           <h4>App 2</h4>
-          <p>App</p>
           <div class="portfolio-links">
-            <a href="{{ asset ('/tema/img/portfolio/portfolio-3.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
+            <a href="{{ asset ('/tema/img/portfolio/portfolio-3.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-eye"></i></a>
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
         </div>
@@ -180,9 +177,8 @@ Badan Penelitan dan Pengembangan Daerah
         <img src="{{ asset ('/tema/img/portfolio/portfolio-4.jpg') }}" class="img-fluid" alt="">
         <div class="portfolio-info">
           <h4>Card 2</h4>
-          <p>Card</p>
           <div class="portfolio-links">
-            <a href="{{ asset ('/tema/img/portfolio/portfolio-4.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
+            <a href="{{ asset ('/tema/img/portfolio/portfolio-4.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 2"><i class="bi bi-eye"></i></a>
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
         </div>
@@ -194,9 +190,8 @@ Badan Penelitan dan Pengembangan Daerah
         <img src="{{ asset ('/tema/img/portfolio/portfolio-5.jpg') }}" class="img-fluid" alt="">
         <div class="portfolio-info">
           <h4>Web 2</h4>
-          <p>Web</p>
           <div class="portfolio-links">
-            <a href="{{ asset ('/tema/img/portfolio/portfolio-5.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
+            <a href="{{ asset ('/tema/img/portfolio/portfolio-5.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 2"><i class="bi bi-eye"></i></a>
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
         </div>
@@ -208,9 +203,8 @@ Badan Penelitan dan Pengembangan Daerah
         <img src="{{ asset ('/tema/img/portfolio/portfolio-6.jpg') }}" class="img-fluid" alt="">
         <div class="portfolio-info">
           <h4>App 3</h4>
-          <p>App</p>
           <div class="portfolio-links">
-            <a href="{{ asset ('/tema/img/portfolio/portfolio-6.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
+            <a href="{{ asset ('/tema/img/portfolio/portfolio-6.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 3"><i class="bi bi-eye"></i></a>
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
         </div>
@@ -222,9 +216,8 @@ Badan Penelitan dan Pengembangan Daerah
         <img src="{{ asset ('/tema/img/portfolio/portfolio-7.jpg') }}" class="img-fluid" alt="">
         <div class="portfolio-info">
           <h4>Card 1</h4>
-          <p>Card</p>
           <div class="portfolio-links">
-            <a href="{{ asset ('/tema/img/portfolio/portfolio-7.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
+            <a href="{{ asset ('/tema/img/portfolio/portfolio-7.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 1"><i class="bi bi-eye"></i></a>
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
         </div>
@@ -236,9 +229,8 @@ Badan Penelitan dan Pengembangan Daerah
         <img src="{{ asset ('/tema/img/portfolio/portfolio-8.jpg') }}" class="img-fluid" alt="">
         <div class="portfolio-info">
           <h4>Card 3</h4>
-          <p>Card</p>
           <div class="portfolio-links">
-            <a href="{{ asset ('/tema/img/portfolio/portfolio-8.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
+            <a href="{{ asset ('/tema/img/portfolio/portfolio-8.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 3"><i class="bi bi-eye"></i></a>
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
         </div>
@@ -250,9 +242,8 @@ Badan Penelitan dan Pengembangan Daerah
         <img src="{{ asset ('/tema/img/portfolio/portfolio-9.jpg') }}" class="img-fluid" alt="">
         <div class="portfolio-info">
           <h4>Web 3</h4>
-          <p>Web</p>
           <div class="portfolio-links">
-            <a href="{{ asset ('/tema/img/portfolio/portfolio-9.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
+            <a href="{{ asset ('/tema/img/portfolio/portfolio-9.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-eye"></i></a>
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
         </div>
@@ -264,9 +255,8 @@ Badan Penelitan dan Pengembangan Daerah
         <img src="{{ asset ('/tema/img/portfolio/portfolio-10.jpg') }}" class="img-fluid" alt="">
         <div class="portfolio-info">
           <h4>App 2</h4>
-          <p>App</p>
           <div class="portfolio-links">
-            <a href="{{ asset ('/tema/img/portfolio/portfolio-10.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
+            <a href="{{ asset ('/tema/img/portfolio/portfolio-10.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-eye"></i></a>
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
         </div>
@@ -278,9 +268,8 @@ Badan Penelitan dan Pengembangan Daerah
         <img src="{{ asset ('/tema/img/portfolio/portfolio-11.jpg') }}" class="img-fluid" alt="">
         <div class="portfolio-info">
           <h4>App 2</h4>
-          <p>App</p>
           <div class="portfolio-links">
-            <a href="{{ asset ('/tema/img/portfolio/portfolio-11.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
+            <a href="{{ asset ('/tema/img/portfolio/portfolio-11.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-eye"></i></a>
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
         </div>
@@ -292,9 +281,8 @@ Badan Penelitan dan Pengembangan Daerah
         <img src="{{ asset ('/tema/img/portfolio/portfolio-12.jpg') }}" class="img-fluid" alt="">
         <div class="portfolio-info">
           <h4>App 2</h4>
-          <p>App</p>
           <div class="portfolio-links">
-            <a href="{{ asset ('/tema/img/portfolio/portfolio-12.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
+            <a href="{{ asset ('/tema/img/portfolio/portfolio-12.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-eye"></i></a>
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
         </div>
@@ -306,9 +294,8 @@ Badan Penelitan dan Pengembangan Daerah
         <img src="{{ asset ('/tema/img/portfolio/portfolio-13.jpg') }}" class="img-fluid" alt="">
         <div class="portfolio-info">
           <h4>App 2</h4>
-          <p>App</p>
           <div class="portfolio-links">
-            <a href="{{ asset ('/tema/img/portfolio/portfolio-13.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
+            <a href="{{ asset ('/tema/img/portfolio/portfolio-13.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-eye"></i></a>
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
         </div>
@@ -320,9 +307,8 @@ Badan Penelitan dan Pengembangan Daerah
         <img src="{{ asset ('/tema/img/portfolio/portfolio-14.jpg') }}" class="img-fluid" alt="">
         <div class="portfolio-info">
           <h4>App 2</h4>
-          <p>App</p>
           <div class="portfolio-links">
-            <a href="{{ asset ('/tema/img/portfolio/portfolio-14.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
+            <a href="{{ asset ('/tema/img/portfolio/portfolio-14.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-eye"></i></a>
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
         </div>
@@ -334,9 +320,8 @@ Badan Penelitan dan Pengembangan Daerah
         <img src="{{ asset ('/tema/img/portfolio/portfolio-15.jpg') }}" class="img-fluid" alt="">
         <div class="portfolio-info">
           <h4>App 2</h4>
-          <p>App</p>
           <div class="portfolio-links">
-            <a href="{{ asset ('/tema/img/portfolio/portfolio-15.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
+            <a href="{{ asset ('/tema/img/portfolio/portfolio-15.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-eye"></i></a>
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
         </div>
@@ -348,9 +333,8 @@ Badan Penelitan dan Pengembangan Daerah
         <img src="{{ asset ('/tema/img/portfolio/portfolio-16.jpg') }}" class="img-fluid" alt="">
         <div class="portfolio-info">
           <h4>App 2</h4>
-          <p>App</p>
           <div class="portfolio-links">
-            <a href="{{ asset ('/tema/img/portfolio/portfolio-16.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
+            <a href="{{ asset ('/tema/img/portfolio/portfolio-16.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-eye"></i></a>
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
         </div>
@@ -362,9 +346,8 @@ Badan Penelitan dan Pengembangan Daerah
         <img src="{{ asset ('/tema/img/portfolio/portfolio-17.jpg') }}" class="img-fluid" alt="">
         <div class="portfolio-info">
           <h4>App 2</h4>
-          <p>App</p>
           <div class="portfolio-links">
-            <a href="{{ asset ('/tema/img/portfolio/portfolio-17.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
+            <a href="{{ asset ('/tema/img/portfolio/portfolio-17.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-eye"></i></a>
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
         </div>
@@ -376,9 +359,8 @@ Badan Penelitan dan Pengembangan Daerah
         <img src="{{ asset ('/tema/img/portfolio/portfolio-18.jpg') }}" class="img-fluid" alt="">
         <div class="portfolio-info">
           <h4>App 2</h4>
-          <p>App</p>
           <div class="portfolio-links">
-            <a href="{{ asset ('/tema/img/portfolio/portfolio-18.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
+            <a href="{{ asset ('/tema/img/portfolio/portfolio-18.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-eye"></i></a>
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
         </div>

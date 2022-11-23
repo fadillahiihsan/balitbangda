@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\HomeController;
 
 
@@ -17,8 +19,8 @@ Route::get('/logout', [AuthController::class, 'logout']);
 
 // Admin
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware('auth');
-Route::get('/berita', [DashboardController::class, 'berita'])->middleware('auth');
-Route::get('/galeri', [DashboardController::class, 'galeri'])->middleware('auth');
+Route::get('/berita', [BeritaController::class, 'berita'])->middleware('auth');
+Route::get('/galeri', [GaleriController::class, 'galeri'])->middleware('auth');
 
 
 

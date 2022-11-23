@@ -141,27 +141,29 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Tambah Foto</h1>
-        <a href="#" class="btn btn-success pull-right">Tambah Baru</a>
+        <a href="#" class="btn btn-success pull-right">Tambah Data</a>
       </div>
       <table class='table table-bordered table-striped'>
           <thead>
               <tr>
                   <th>No</th>
                   <th>Judul</th>
-                  <th>Tanggal</th>
+                  <th>Foto</th>
                   <th>Pengaturan</th>
               </tr>
           </thead>
+          @foreach($post_galeri as $g)
           <tbody>
-              <td>1</td>
-              <td>Foto</td>
-              <td>Tanggal</td>
+              <td>{{ $g->galeri_id }}</td>
+              <td>{{ $g->judul }}</td>
+              <td><img src='{{ $g->foto }}'></td>
               <td>
                 <a href="/dashboard" title="Lihat" data-toggle="tooltip"><span data-feather="eye"></span></a>
                 <a href="/dashboard" title="Edit" data-toggle="tooltip"><span data-feather="edit"></span></a>
                 <a href="/dashboard" title="Hapus" data-toggle="tooltip"><span data-feather="trash-2"></span></a>
               </td>
           </tbody>
+          @endforeach
       </table>
       </div>
     </main>
