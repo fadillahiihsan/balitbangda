@@ -156,7 +156,7 @@
           </thead>
           @foreach($post_berita as $b)
           <tbody>
-              <td>{{ $b->berita_id }}</td>
+              <td>{{ $b->id }}</td>
               <td>{{ $b->judul }}</td>
               <td>{{ $b->isi }}</td>
               <td>{{ $b->foto }}</td>

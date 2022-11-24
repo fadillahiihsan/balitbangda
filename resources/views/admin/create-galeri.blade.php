@@ -154,7 +154,7 @@
           </thead>
           @foreach($post_galeri as $g)
           <tbody>
-              <td>{{ $g->galeri_id }}</td>
+              <td>{{ $g->id }}</td>
               <td>{{ $g->judul }}</td>
               <td><img src='{{ $g->foto }}'></td>
               <td>
