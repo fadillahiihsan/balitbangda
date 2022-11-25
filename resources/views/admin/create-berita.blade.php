@@ -148,7 +148,7 @@
               <tr>
                   <th>No</th>
                   <th>Judul</th>
-                  <th>isi</th>
+                  <th>Isi</th>
                   <th>Foto</th>
                   <th>Tanggal</th>
                   <th>Pengaturan</th>
