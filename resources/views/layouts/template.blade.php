@@ -131,7 +131,9 @@
               </li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>UPT</span> <i class="bi bi-chevron-down"></i></a>
+
+          <!-- UPT -->
+          <!-- <li class="dropdown"><a href="#"><span>UPT</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li class="dropdown"><a href="#"><span>BP3T Tambang Ulang</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
@@ -142,7 +144,9 @@
                 </ul>
               </li>
               <li><a href="#">Kebun Raya Banua</a></li>
-            </ul>
+            </ul> -->
+            
+            <li><a class="getstarted scrollto" href="/login">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

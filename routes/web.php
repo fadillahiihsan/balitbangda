@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DashboardController;
@@ -21,6 +20,8 @@ Route::get('/logout', [AuthController::class, 'logout']);
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware('auth');
 Route::get('/berita', [BeritaController::class, 'berita'])->middleware('auth');
 Route::get('/galeri', [GaleriController::class, 'galeri'])->middleware('auth');
+Route::get('/tambah-berita', [BeritaController::class, 'tambahBerita'])->middleware('auth');
+Route::get('/tambah-galeri', [GaleriController::class, 'tambahGaleri'])->middleware('auth');
 
 
 

@@ -11,6 +11,11 @@ class GaleriController extends Controller
     {
         $post_galeri = DB::table('post_galeri')->get();
 
-        return view('admin.create-galeri', ['post_galeri' => $post_galeri]);
+        return view('admin.galeri', ['post_galeri' => $post_galeri]);
+    }
+
+    public function tambahGaleri()
+    {
+        return view('admin.tambahGaleri');
     }
 }

@@ -87,7 +87,7 @@
   <body>
     
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Balitbangda</a>
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="/dashboard">Balitbangda</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -105,7 +105,7 @@
       <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/dashboard">
+            <a class="nav-link " aria-current="page" href="/dashboard">
               <span data-feather="home" class="align-text-bottom"></span>
               Dashboard
             </a>
@@ -117,7 +117,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/galeri">
+            <a class="nav-link active" href="/galeri">
               <span data-feather="image" class="align-text-bottom"></span>
               Galeri
             </a>
@@ -140,35 +140,63 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Tambah Berita</h1>
-        <a href="#" class="btn btn-success pull-right">Tambah Data</a>
+        <h1 class="h2">Tambah Foto</h1>
+        <a href="/tambah-berita" class="btn btn-success pull-right">Tambah Data</a>
       </div>
-      <table class='table table-bordered table-striped'>
-          <thead>
-              <tr>
-                  <th>No</th>
-                  <th>Judul</th>
-                  <th>Isi</th>
-                  <th>Foto</th>
-                  <th>Tanggal</th>
-                  <th>Pengaturan</th>
-              </tr>
-          </thead>
-          @foreach($post_berita as $b)
-          <tbody>
-              <td>{{ $b->id }}</td>
-              <td>{{ $b->judul }}</td>
-              <td>{{ $b->isi }}</td>
-              <td>{{ $b->foto }}</td>
-              <td>{{ $b->tanggal }}</td>
-              <td>
-                <a href="/dashboard" title="Lihat" data-toggle="tooltip"><span data-feather="eye"></span></a>
-                <a href="/dashboard" title="Edit" data-toggle="tooltip"><span data-feather="edit"></span></a>
-                <a href="/dashboard" title="Hapus" data-toggle="tooltip"><span data-feather="trash-2"></span></a>
-              </td>
-          </tbody>
-          @endforeach
-      </table>
+      <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card border-0 shadow rounded">
+                    <div class="card-body">
+                        <form method="POST" enctype="multipart/form-data">
+                        
+                            @csrf
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">FOTO</label>
+                                <input type="file" class="form-control @error('image') is-invalid @enderror" name="image">
+                            
+                                <!-- error message untuk title -->
+                                @error('image')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">JUDUL</label>
+                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" placeholder="Masukkan Judul Foto">
+                            
+                                <!-- error message untuk title -->
+                                @error('title')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <!-- <div class="form-group">
+                                <label class="font-weight-bold">KONTEN</label>
+                                <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Konten Blog">{{ old('content') }}</textarea>
+                            
+                                <!-- error message untuk content -->
+                                <!-- @error('content')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div> --> 
+                            <br>
+                            <button type="submit" class="btn btn-md btn-primary">SIMPAN</button>
+                            <button type="reset" class="btn btn-md btn-warning">RESET</button>
+
+                        </form> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
       </div>
     </main>
   </div>

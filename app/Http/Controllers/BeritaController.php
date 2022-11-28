@@ -12,6 +12,11 @@ class BeritaController extends Controller
     {
         $post_berita = DB::table('post_berita')->get();
 
-        return view('admin.create-berita', ['post_berita' => $post_berita]);
+        return view('admin.berita', ['post_berita' => $post_berita]);
+    }
+
+    public function tambahBerita()     
+    {
+        return view('admin.tambahBerita');
     }
 }
