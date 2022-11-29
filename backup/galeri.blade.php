@@ -105,19 +105,19 @@
       <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="/dashboard">
+            <a class="nav-link" aria-current="page" href="/dashboard">
               <span data-feather="home" class="align-text-bottom"></span>
               Dashboard
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/berita">
+            <a class="nav-link" href="/berita">
               <span data-feather="file-text" class="align-text-bottom"></span>
               Berita
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/galeri">
+            <a class="nav-link active" href="/galeri">
               <span data-feather="image" class="align-text-bottom"></span>
               Galeri
             </a>
@@ -140,27 +140,23 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Tambah Berita</h1>
-        <a href="/tambah-berita" class="btn btn-success pull-right">Tambah Data</a>
+        <h1 class="h2">Tambah Foto</h1>
+        <a href="/tambah-galeri" class="btn btn-success pull-right">Tambah Data</a>
       </div>
       <table class='table table-bordered table-striped'>
           <thead>
               <tr>
                   <th>No</th>
                   <th>Judul</th>
-                  <th>Isi</th>
                   <th>Foto</th>
-                  <th>Tanggal</th>
                   <th>Pengaturan</th>
               </tr>
           </thead>
-          @foreach($berita as $b)
+          @foreach($galeri as $g)
           <tbody>
-              <td>{{ $b->id }}</td>
-              <td>{{ $b->judul }}</td>
-              <td>{{ $b->isi }}</td>
-              <td>{{ $b->foto }}</td>
-              <td>{{ $b->tanggal }}</td>
+              <td>{{ $g->id }}</td>
+              <td>{{ $g->judul }}</td>
+              <td><img src='{{ $g->foto }}'></td>
               <td>
                 <a href="/dashboard" title="Lihat" data-toggle="tooltip"><span data-feather="eye"></span></a>
                 <a href="/dashboard" title="Edit" data-toggle="tooltip"><span data-feather="edit"></span></a>

@@ -10,6 +10,7 @@
     <title>Dashboard - Balitbangda</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/dashboard/">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     
 
@@ -141,14 +142,13 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Tambah Berita</h1>
-        <a href="/tambah-berita" class="btn btn-success pull-right">Tambah Data</a>
       </div>
       <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <form method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('berita.store') }}" method="POST" enctype="multipart/form-data">
                         
                             @csrf
 
@@ -190,10 +190,10 @@
 
                             <div class="form-group">
                                 <label class="font-weight-bold">Tanggal</label>
-                                <input type="date" class="form-control @error('date') is-invalid @enderror"
-                                name="content">
+                                <input type="date" class="form-control @error('tanggal') is-invalid @enderror"
+                                name="tanggal" value="{{ old('tanggal') }}">
 
-                                @error('date')
+                                @error('tanggal')
                                     <div class="alert alert-danger mt-2">
                                         {{ $message }}
                                     </div>
@@ -216,11 +216,12 @@
 </div>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="{{ asset ('/tema/dist/js/bootstrap.bundle.min.js') }}"></script>
-    
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="tema/js/dashboard.js"></script>
-    
     <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+    
 
     <script>
     CKEDITOR.replace( 'content' );

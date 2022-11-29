@@ -105,19 +105,19 @@
       <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/dashboard">
+            <a class="nav-link " aria-current="page" href="/dashboard">
               <span data-feather="home" class="align-text-bottom"></span>
               Dashboard
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/berita">
+            <a class="nav-link active" href="/berita">
               <span data-feather="file-text" class="align-text-bottom"></span>
               Berita
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/galeri">
+            <a class="nav-link" href="/galeri">
               <span data-feather="image" class="align-text-bottom"></span>
               Galeri
             </a>
@@ -140,31 +140,76 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Tambah Foto</h1>
-        <a href="/tambah-galeri" class="btn btn-success pull-right">Tambah Data</a>
+        <h1 class="h2">Tambah Berita</h1>
+        <a href="/tambah-berita" class="btn btn-success pull-right">Tambah Data</a>
       </div>
-      <table class='table table-bordered table-striped'>
-          <thead>
-              <tr>
-                  <th>No</th>
-                  <th>Judul</th>
-                  <th>Foto</th>
-                  <th>Pengaturan</th>
-              </tr>
-          </thead>
-          @foreach($post_galeri as $g)
-          <tbody>
-              <td>{{ $g->id }}</td>
-              <td>{{ $g->judul }}</td>
-              <td><img src='{{ $g->foto }}'></td>
-              <td>
-                <a href="/dashboard" title="Lihat" data-toggle="tooltip"><span data-feather="eye"></span></a>
-                <a href="/dashboard" title="Edit" data-toggle="tooltip"><span data-feather="edit"></span></a>
-                <a href="/dashboard" title="Hapus" data-toggle="tooltip"><span data-feather="trash-2"></span></a>
-              </td>
-          </tbody>
-          @endforeach
-      </table>
+      <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card border-0 shadow rounded">
+                    <div class="card-body">
+                        <form action="{{ route('admin.store') }}" method="POST" enctype="multipart/form-data">
+                        
+                            @csrf
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">FOTO</label>
+                                <input type="file" class="form-control @error('foto') is-invalid @enderror" name="image">
+                            
+                                <!-- error message untuk title -->
+                                @error('foto')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">JUDUL</label>
+                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" placeholder="Masukkan Judul Berita">
+                            
+                                <!-- error message untuk title -->
+                                @error('title')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">Isi</label>
+                                <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Isi Berita">{{ old('content') }}</textarea>
+                            
+                                <!-- error message untuk content -->
+                                @error('content')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">Tanggal</label>
+                                <input type="date" class="form-control @error('date') is-invalid @enderror"
+                                name="content">
+
+                                @error('date')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                                <br>
+                            <button type="submit" class="btn btn-md btn-primary">SIMPAN</button>
+                            <button type="reset" class="btn btn-md btn-warning">RESET</button>
+
+                        </form> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
       </div>
     </main>
   </div>
@@ -172,7 +217,14 @@
 
 
     <script src="{{ asset ('/tema/dist/js/bootstrap.bundle.min.js') }}"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="tema/js/dashboard.js"></script>
+    
+    <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
 
-      <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="tema/js/dashboard.js"></script>
+    <script>
+    CKEDITOR.replace( 'content' );
+    </script>
+
   </body>
 </html>

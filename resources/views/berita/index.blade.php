@@ -141,42 +141,57 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Tambah Berita</h1>
-        <a href="/tambah-berita" class="btn btn-success pull-right">Tambah Data</a>
       </div>
-      <table class='table table-bordered table-striped'>
-          <thead>
-              <tr>
-                  <th>No</th>
-                  <th>Judul</th>
-                  <th>Isi</th>
-                  <th>Foto</th>
-                  <th>Tanggal</th>
-                  <th>Pengaturan</th>
-              </tr>
-          </thead>
-          @foreach($berita as $b)
-          <tbody>
-              <td>{{ $b->id }}</td>
-              <td>{{ $b->judul }}</td>
-              <td>{{ $b->isi }}</td>
-              <td>{{ $b->foto }}</td>
-              <td>{{ $b->tanggal }}</td>
-              <td>
-                <a href="/dashboard" title="Lihat" data-toggle="tooltip"><span data-feather="eye"></span></a>
-                <a href="/dashboard" title="Edit" data-toggle="tooltip"><span data-feather="edit"></span></a>
-                <a href="/dashboard" title="Hapus" data-toggle="tooltip"><span data-feather="trash-2"></span></a>
-              </td>
-          </tbody>
-          @endforeach
-      </table>
-      </div>
-    </main>
-  </div>
-</div>
+      <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card border-0 shadow rounded">
+                    <div class="card-body">
+                        <a href="{{ route('berita.create') }}" class="btn btn-md btn-success mb-3">TAMBAH BERITA</a>
+                        <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col">GAMBAR</th>
+                                <th scope="col">JUDUL</th>
+                                <th scope="col">ISI</th>
+                                <th scope="col">TANGGAL</th>
+                                <th scope="col">AKSI</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              @forelse ($beritas as $berita)
+                                <tr>
+                                    <td class="text-center">
+                                        <img src="{{ Storage::url('public/images/').$berita->image }}" class="rounded" style="width: 150px">
+                                    </td>
+                                    <td>{{ $berita->title }}</td>
+                                    <td>{!! $berita->content !!}</td>
+                                    <td>{{ $berita->tanggal }}</td>
+                                    <td class="text-center">
+                                        <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('berita.destroy', $berita->id) }}" method="POST">
+                                            <a href="{{ route('berita.edit', $berita->id) }}" class="btn btn-sm btn-primary">EDIT</a>
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                              @empty
+                                  <div class="alert alert-danger">
+                                      Data berita belum Tersedia.
+                                  </div>
+                              @endforelse
+                            </tbody>
+                          </table>  
+                          {{ $beritas->links() }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <script src="{{ asset ('/tema/dist/js/bootstrap.bundle.min.js') }}"></script>
-
-      <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="tema/js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="tema/js/dashboard.js"></script>
   </body>
 </html>

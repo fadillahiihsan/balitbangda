@@ -2,14 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\DetailController;
 use App\Http\Controllers\HomeController;
-
+use App\Models\Berita;
 
 // Home
 Route::get('/', [HomeController::class, 'index']);
+
+Route::get('/detail-berita', [DetailController::class, 'index']);
 
 // Auth
 Route::get('/login', [AuthController::class, 'login'])->name('login');
@@ -18,10 +19,14 @@ Route::get('/logout', [AuthController::class, 'logout']);
 
 // Admin
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware('auth');
-Route::get('/berita', [BeritaController::class, 'berita'])->middleware('auth');
-Route::get('/galeri', [GaleriController::class, 'galeri'])->middleware('auth');
-Route::get('/tambah-berita', [BeritaController::class, 'tambahBerita'])->middleware('auth');
-Route::get('/tambah-galeri', [GaleriController::class, 'tambahGaleri'])->middleware('auth');
+// Route::get('/berita', [BeritaController::class, 'berita'])->middleware('auth');
+// Route::get('/galeri', [GaleriController::class, 'galeri'])->middleware('auth');
+// Route::post('/tambah-berita', [BeritaController::class, 'create'])->middleware('auth');
+// Route::get('/tambah-galeri', [GaleriController::class, 'tambahGaleri'])->middleware('auth');
+
+Route::resource('berita', BeritaController::class)->middleware('auth');
+Route::resource('galeri', GaleriController::class)->middleware('auth');
+
 
 
 
@@ -53,4 +58,3 @@ Route::get('/tambah-galeri', [GaleriController::class, 'tambahGaleri'])->middlew
 //     Route::group(['middleware' => ['cek_login:editor']], function () {
 //         Route::resource('editor', AdminController::class);
 //     });
-// });

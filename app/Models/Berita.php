@@ -7,5 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Berita extends Model
 {
-    protected $fillabel = ['id', 'judul', 'isi', 'foto', 'tanggal'];
+    use HasFactory;
+
+    /**
+     * fillable
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'image', 'title', 'content', 'tanggal'
+    ];
 }

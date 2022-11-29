@@ -5,17 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Blog extends Model
+class Galeri extends Model
 {
     use HasFactory;
 
-     /**
+    /**
      * fillable
      *
      * @var array
      */
     protected $fillable = [
-        'image', 'title', 'content'
+        'image', 'title'
     ];
 }
-
