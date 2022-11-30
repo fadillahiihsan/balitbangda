@@ -151,6 +151,7 @@
                         <table class="table table-bordered">
                             <thead>
                               <tr>
+                                <th scope="col">ID</th>
                                 <th scope="col">GAMBAR</th>
                                 <th scope="col">JUDUL</th>
                                 <th scope="col">AKSI</th>
@@ -159,6 +160,7 @@
                             <tbody>
                               @forelse ($galeris as $galeri)
                                 <tr>
+                                <td>{{ $galeri->id }}</td>
                                     <td class="text-center">
                                         <img src="{{ Storage::url('public/images/').$galeri->image }}" class="rounded" style="width: 150px">
                                     </td>

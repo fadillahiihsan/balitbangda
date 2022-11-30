@@ -76,15 +76,15 @@ Badan Penelitan dan Pengembangan Daerah
     <p>Berita Terkini</p>
   </header>
 
-
+  @foreach($beritas as $berita)
 
   <div class="row">
 
     <div class="col-lg-4">
       <div class="post-box">
-        <div class="post-img"><img src="" class="img-fluid" alt=""></div>
-        <span class="post-date">Kamis, 27 Januari 2022</span>
-        <h3 class="post-title">Menerima Tamu dari DPRD Kabupaten Kotabaru</h3>
+        <div class="post-img"><img src="{{ Storage::url('public/images/').$berita->image }}" class="img-fluid" alt=""></div>
+        <span class="post-date">{{ $berita->tanggal }}</span>
+        <h3 class="post-title">{{ $berita->title }}</h3>
         <a href="/detail-berita" class="readmore stretched-link mt-auto"><span>Baca Lebih Lanjut</span><i class="bi bi-arrow-right"></i></a>
       </div>
     </div>
@@ -107,7 +107,7 @@ Badan Penelitan dan Pengembangan Daerah
       </div>
     </div>
 
-
+  @endforeach
 
   </div>
 
@@ -124,26 +124,17 @@ Badan Penelitan dan Pengembangan Daerah
     <p>Galeri Kami</p>
   </header>
 
-  <!-- <div class="row" data-aos="fade-up" data-aos-delay="100">
-    <div class="col-lg-12 d-flex justify-content-center">
-      <ul id="portfolio-flters">
-        <li data-filter="*" class="filter-active">All</li>
-        <li data-filter=".filter-app">App</li>
-        <li data-filter=".filter-card">Card</li>
-        <li data-filter=".filter-web">Web</li>
-      </ul>
-    </div>
-  </div> -->
+  @foreach ($galeris as $galeri)
 
   <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
       <div class="portfolio-wrap">
-        <img src="{{ asset ('/tema/img/portfolio/portfolio-1.jpg') }}" class="img-fluid" alt="">
+        <img src="{{ Storage::url('public/images/').$galeri->image }}" class="img-fluid" alt="">
         <div class="portfolio-info">
-          <h4>App 1</h4>
+          <h4>{{ $galeri->title }}</h4>
           <div class="portfolio-links">
-            <a href="{{ asset ('/tema/img/portfolio/portfolio-1.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i class="bi bi-eye"></i></a>
+            <a href="{{ Storage::url('public/images/').$galeri->image }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="{{ $galeri->title }}"><i class="bi bi-eye"></i></a>
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
         </div>
@@ -152,11 +143,11 @@ Badan Penelitan dan Pengembangan Daerah
 
     <div class="col-lg-4 col-md-6 portfolio-item filter-web">
       <div class="portfolio-wrap">
-        <img src="{{ asset ('/tema/img/portfolio/portfolio-2.jpg') }}" class="img-fluid" alt="">
+        <img src="{{ Storage::url('public/images/').$galeri->image }}" class="img-fluid" alt="">
         <div class="portfolio-info">
-          <h4>Web 3</h4>
+          <h4>{{ $galeri->title }}</h4>
           <div class="portfolio-links">
-            <a href="{{ asset ('/tema/img/portfolio/portfolio-2.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-eye"></i></a>
+            <a href="{{ Storage::url('public/images/').$galeri->image }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="{{ $galeri->title }}"><i class="bi bi-eye"></i></a>
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
         </div>
@@ -370,7 +361,7 @@ Badan Penelitan dan Pengembangan Daerah
         </div>
       </div>
     </div>
-
+  @endforeach
   </div>
 
 </div>

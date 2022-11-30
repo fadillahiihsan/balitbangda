@@ -151,6 +151,7 @@
                         <table class="table table-bordered">
                             <thead>
                               <tr>
+                                <th scope="col">ID</th>
                                 <th scope="col">GAMBAR</th>
                                 <th scope="col">JUDUL</th>
                                 <th scope="col">ISI</th>
@@ -161,6 +162,8 @@
                             <tbody>
                               @forelse ($beritas as $berita)
                                 <tr>
+                                    <td>{{ $berita->id }}</td>
+
                                     <td class="text-center">
                                         <img src="{{ Storage::url('public/images/').$berita->image }}" class="rounded" style="width: 150px">
                                     </td>
