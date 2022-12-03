@@ -15,6 +15,7 @@ Buat Dabatase lalu edit di "env"
 - <code>cp .env.example .env</code>
 - <code>php artisan key:generate</code>
 - <code>php artisan migrate --seed</code>
+- <code>php artisan storage:link</code>
 - <code>php artisan serve</code>
 
 ## About Laravel
