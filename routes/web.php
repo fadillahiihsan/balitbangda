@@ -3,15 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\DetailController;
 use App\Http\Controllers\HomeController;
 use App\Models\Berita;
 
 // Home
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/detail-berita', [DetailController::class, 'index']);
-
+ //Route::get('/detail-berita/{id}', [DetailController::class, 'index']);
+Route::resource('detail-berita', DetailController::class);
 // Auth
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'authenticated']);
@@ -26,6 +25,8 @@ Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(
 
 Route::resource('berita', BeritaController::class)->middleware('auth');
 Route::resource('galeri', GaleriController::class)->middleware('auth');
+
+// Route::get('berita/{id}', BeritaController::class, 'show');
 
 
 

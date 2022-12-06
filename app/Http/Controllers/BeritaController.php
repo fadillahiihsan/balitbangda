@@ -146,4 +146,10 @@ class BeritaController extends Controller
         return redirect()->route('berita.index')->with(['error' => 'Data Gagal Dihapus!']);
       }
     }
+
+    public function show($id)
+    {
+        $beritum = Berita::find($id);
+        return view('berita.show', compact('beritum')) ;
+    }
 }

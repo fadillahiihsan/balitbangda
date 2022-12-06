@@ -16,9 +16,4 @@ class HomeController extends Controller
         return view('homepage', compact('beritas', 'galeris'));
     }
     
-    // public function post()
-    // {
-    //     $beritas = Berita::latest()->paginate(10);
-        
-    // }
 }

@@ -154,7 +154,7 @@
                     <div class="height10"></div>
                     <i class="feather-16" data-feather="calendar"></i><span style="color: #4154f1;">{{ $berita->tanggal }}</span>&nbsp;&nbsp;&nbsp;
                     <div class="blog-detail-cover" style="background-image: url('public/images/')">
-                        <img src="{{ Storage::url('public/images/').$berita->image }}" style="width:800px;height:400px;" class="img-responsive btn-block">
+                        <img src="{{ Storage::url('public/images/').$berita->image }}" style="width:800px;height:500px;" class="img-responsive btn-block">
                     </div>
                     <div class="btr bt-content">{!! $berita->content !!}</div>
             </div>
