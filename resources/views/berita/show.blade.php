@@ -66,7 +66,7 @@
           </li>
           <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#recent-blog-posts">Berita</a></li>
+              <li><a href="/#recent-blog-posts">Berita</a></li>
               <li><a href="#contact">Kontak</a></li>
               <li><a href="#">Agenda</a></li>
               <li><a href="#">Pengumuman</a></li>
@@ -152,7 +152,7 @@
                 <div class="height40"></div>                    
                 <h1 class="text-capitalize" style="color:#012970;font-weight:bold;">{{ $berita->title }}</h1>
                     <div class="height10"></div>
-                    <i class="feather-16" data-feather="calendar"></i><span style="color: #4154f1;">{{ $berita->tanggal }}</span>&nbsp;&nbsp;&nbsp;
+                    <span style="color: #4154f1;">{{ $berita->tanggal }}</span>&nbsp;&nbsp;&nbsp;
                     <div class="blog-detail-cover" style="background-image: url('public/images/')">
                         <img src="{{ Storage::url('public/images/').$berita->image }}" style="width:800px;height:500px;" class="img-responsive btn-block">
                     </div>

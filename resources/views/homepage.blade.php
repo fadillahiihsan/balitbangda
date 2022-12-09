@@ -169,7 +169,7 @@ Badan Penelitan dan Pengembangan Daerah
           <div class="info-box">
             <i class="bi bi-clock"></i>
             <h3>Jam Kerja</h3>
-            <p>Senin - Jumat<br>08:00 WITA - 17:00 WITA</p>
+            <p>Senin - Jumat<br>08:00 WITA - 16:30 WITA</p>
           </div>
         </div>
       </div>
@@ -177,31 +177,30 @@ Badan Penelitan dan Pengembangan Daerah
     </div>
 
     <div class="col-lg-6">
-      <form action="forms/contact.php" method="post" class="php-email-form">
+      <form action="#" method="post" class="php-email-form">
+        
+        @csrf
+
         <div class="row gy-4">
 
           <div class="col-md-6">
-            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Nama" required>
           </div>
 
           <div class="col-md-6 ">
-            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
           </div>
 
           <div class="col-md-12">
-            <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subjek" required>
           </div>
 
           <div class="col-md-12">
-            <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+            <textarea class="form-control" name="message" id="message" rows="6" placeholder="Pesan" required></textarea>
           </div>
 
           <div class="col-md-12 text-center">
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Pesan kamu telah terkirim. Terima kasih!</div>
-
-            <button type="submit">Kirim Pesan</button>
+            <button type="submit" value="Send Message">Kirim Pesan</button>
           </div>
 
         </div>

@@ -169,7 +169,7 @@
           </div>
 
           <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-            <h4>KANTOR BALITBANG KALSEL</h4>
+            <h4>KANTOR BALITBANGDA KALSEL</h4>
             <p>
             Jl. Dharma Praja I, Komplek Perkantoran Pemerintah Provinsi Kalimantan Selatan Banjarbaru
               <a href="mailto:kalselbalitbangda@gmail.com">kalselbalitbangda@gmail.com</a>

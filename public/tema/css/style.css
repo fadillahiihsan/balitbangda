@@ -1276,6 +1276,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
   justify-content: center;
   border-radius: 50%;
   transition: 0.3s;
+  
 }
 
 .portfolio .portfolio-wrap .portfolio-links a i {
