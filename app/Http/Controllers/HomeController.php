@@ -12,8 +12,8 @@ class HomeController extends Controller
     public function index()
     {   
         $galeris = DB::table('galeris')->get();
-
+        $jurnals = DB::table('jurnals')->get();
         $beritas = DB::table('beritas')->get();
-        return view('homepage', compact('beritas', 'galeris'));
+        return view('homepage', compact('beritas', 'galeris', 'jurnals'));
     }
 }

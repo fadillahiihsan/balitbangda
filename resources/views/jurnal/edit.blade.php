@@ -113,7 +113,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/berita">
+            <a class="nav-link " href="/berita">
               <span data-feather="file-text" class="align-text-bottom"></span>
               Berita
             </a>
@@ -125,7 +125,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/jurnal">
+            <a class="nav-link active" href="/jurnal">
               <span data-feather="file" class="align-text-bottom"></span>
               Jurnal
             </a>
@@ -148,14 +148,14 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Tambah Berita</h1>
+        <h1 class="h2">Tambah Jurnal</h1>
       </div>
       <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <form action="{{ route('berita.update', $beritum->id) }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('jurnal.update', $jurnal->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
 
@@ -166,7 +166,7 @@
 
                             <div class="form-group">
                                 <label class="font-weight-bold">JUDUL</label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title', $beritum->title) }}" placeholder="Masukkan Judul Berita">
+                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title', $jurnal->title) }}" placeholder="Masukkan Judul Berita">
                             
                                 <!-- error message untuk title -->
                                 @error('title')
@@ -177,8 +177,56 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="font-weight-bold">KONTEN</label>
-                                <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Konten Berita">{{ old('content', $beritum->content) }}</textarea>
+                                <label class="font-weight-bold">PENERBIT</label>
+                                <input type="text" class="form-control @error('penertbit') is-invalid @enderror" name="penerbit" value="{{ old('penerbit', $jurnal->penerbit) }}" placeholder="Masukkan Judul Berita">
+                            
+                                <!-- error message untuk Penerbit -->
+                                @error('penerbit')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">NO ISSN/ISBN</label>
+                                <input type="text" class="form-control @error('no') is-invalid @enderror" name="no" value="{{ old('no', $jurnal->no) }}" placeholder="Masukkan Judul Berita">
+                            
+                                <!-- error message untuk no -->
+                                @error('no')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">TAHUN</label>
+                                <input type="text" class="form-control @error('tahun') is-invalid @enderror" name="tahun" value="{{ old('tahun', $jurnal->tahun) }}" placeholder="Masukkan Judul Berita">
+                            
+                                <!-- error message untuk tahun -->
+                                @error('tahun')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">DESKRIPSI FISIK</label>
+                                <input type="text" class="form-control @error('deskripsi') is-invalid @enderror" name="deskripsi" value="{{ old('deskripsi', $jurnal->deskripsi) }}" placeholder="Masukkan Judul Berita">
+                            
+                                <!-- error message untuk deskripsi -->
+                                @error('deskripsi')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">DESKRIPSI</label>
+                                <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Konten Berita">{{ old('content', $jurnal->content) }}</textarea>
                             
                                 <!-- error message untuk content -->
                                 @error('content')
@@ -188,17 +236,7 @@
                                 @enderror
                             </div>
 
-                            <div class="form-group">
-                                <label class="font-weight-bold">Tanggal</label>
-                                <input type="date" class="form-control @error('tanggal') is-invalid @enderror"
-                                name="tanggal" value="{{ old('tanggal', $beritum->tanggal) }}">
-
-                                @error('tanggal')
-                                    <div class="alert alert-danger mt-2">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
+                        
 
                             <br>
 

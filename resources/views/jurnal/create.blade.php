@@ -12,7 +12,6 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/dashboard/">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-
     
 
     
@@ -113,7 +112,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/berita">
+            <a class="nav-link" href="/berita">
               <span data-feather="file-text" class="align-text-bottom"></span>
               Berita
             </a>
@@ -125,7 +124,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/jurnal">
+            <a class="nav-link active" href="/jurnal">
               <span data-feather="file" class="align-text-bottom"></span>
               Jurnal
             </a>
@@ -148,25 +147,32 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Tambah Berita</h1>
+        <h1 class="h2">Tambah Jurnal</h1>
       </div>
       <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <form action="{{ route('berita.update', $beritum->id) }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('jurnal.store') }}" method="POST" enctype="multipart/form-data">
+                        
                             @csrf
-                            @method('PUT')
 
                             <div class="form-group">
-                                <label class="font-weight-bold">GAMBAR</label>
-                                <input type="file" class="form-control" name="image">
+                                <label class="font-weight-bold">FOTO</label>
+                                <input type="file" class="form-control @error('image') is-invalid @enderror" name="image">
+                            
+                                <!-- error message untuk title -->
+                                @error('image')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
 
                             <div class="form-group">
                                 <label class="font-weight-bold">JUDUL</label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title', $beritum->title) }}" placeholder="Masukkan Judul Berita">
+                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" placeholder="Masukkan Judul Berita">
                             
                                 <!-- error message untuk title -->
                                 @error('title')
@@ -177,8 +183,56 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="font-weight-bold">KONTEN</label>
-                                <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Konten Berita">{{ old('content', $beritum->content) }}</textarea>
+                                <label class="font-weight-bold">PENERBIT</label>
+                                <input type="text" class="form-control @error('penerbit') is-invalid @enderror" name="penerbit" value="{{ old('penerbit') }}" placeholder="Masukkan Judul Berita">
+                            
+                                <!-- error message untuk penerbit -->
+                                @error('penerbit')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">NO ISSN/ISBN</label>
+                                <input type="text" class="form-control @error('no') is-invalid @enderror" name="no" value="{{ old('no') }}" placeholder="Masukkan Judul Berita">
+                            
+                                <!-- error message untuk no -->
+                                @error('no')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">TAHUN TERBIT</label>
+                                <input type="text" class="form-control @error('tahun') is-invalid @enderror" name="tahun" value="{{ old('tahun') }}" placeholder="Masukkan Judul Berita">
+                            
+                                <!-- error message untuk title -->
+                                @error('tahun')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">DESKRIPSI FISIK</label>
+                                <textarea class="form-control @error('deskripsi') is-invalid @enderror" name="deskripsi" rows="5" placeholder="Masukkan Isi Berita">{{ old('deskripsi') }}</textarea>
+                            
+                                <!-- error message untuk content -->
+                                @error('deskripsi')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">DESKRIPSI</label>
+                                <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Isi Berita">{{ old('content') }}</textarea>
                             
                                 <!-- error message untuk content -->
                                 @error('content')
@@ -188,21 +242,9 @@
                                 @enderror
                             </div>
 
-                            <div class="form-group">
-                                <label class="font-weight-bold">Tanggal</label>
-                                <input type="date" class="form-control @error('tanggal') is-invalid @enderror"
-                                name="tanggal" value="{{ old('tanggal', $beritum->tanggal) }}">
 
-                                @error('tanggal')
-                                    <div class="alert alert-danger mt-2">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
-
-                            <br>
-
-                            <button type="submit" class="btn btn-md btn-primary">UPDATE</button>
+                                <br>
+                            <button type="submit" class="btn btn-md btn-primary">SIMPAN</button>
                             <button type="reset" class="btn btn-md btn-warning">RESET</button>
 
                         </form> 
@@ -211,17 +253,16 @@
             </div>
         </div>
     </div>
-    </div>
       </div>
     </main>
   </div>
 </div>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="{{ asset ('/tema/dist/js/bootstrap.bundle.min.js') }}"></script>
-    
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="tema/js/dashboard.js"></script>
-    
     <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
     
 

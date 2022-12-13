@@ -80,12 +80,7 @@
               <li><a href="#">Forum Litbang</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>Layanan</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Jurnal</a></li>
-              <li><a href="#">Produk Hukum</a></li>
-            </ul>
-          </li>
+          <li><a class="nav-link scrollto" href="http://127.0.0.1:8000/detail-jurnal">Jurnal</a></li>
           <li><a class="nav-link scrollto" href="#portfolio">Galeri</a></li>
           <li class="dropdown"><a href="#"><span>Mitra</span> <i class="bi bi-chevron-down"></i></a>
             <ul>

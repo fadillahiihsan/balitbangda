@@ -113,6 +113,12 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="jurnal">
+              <span data-feather="file" class="align-text-bottom"></span>
+              Jurnal
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="/" target="_blank">
               <span data-feather="chrome" class="align-text-bottom"></span>
               Lihat Website

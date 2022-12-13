@@ -127,7 +127,46 @@ Badan Penelitan dan Pengembangan Daerah
 
 </div>
 
-</section><!-- End Portfolio Section -->
+</section><!-- End Portofolio Section -->
+
+<section id="jurnal" class="jurnal">
+
+<style>
+
+img {
+  float: left;
+  margin-right: 15px;
+}
+
+</style>
+
+<div class="container" data-aos="fade-up">
+
+  <header class="section-header">
+    <h2>Jurnal & Laporan</h2>
+    <p>Jurnal & Laporan</p>
+  </header>
+
+  <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+  @foreach ($jurnals as $jurnal)
+
+  <div class="row">
+    <ul>
+                <div><img src="{{ Storage::url('public/images/').$jurnal->image }}" class="rounded" style="width: 150px" ></div>
+                <div>Judul&nbsp;&nbsp;&nbsp;: <strong>Jurnal Kebijakan Pembangunan Volume 15 No 1 Juni 2020</strong></div>
+                <div>No ISSN/ISBN&nbsp;&nbsp;&nbsp;: 2085-6091</div>
+                <div>Tahun terbit&nbsp;&nbsp;&nbsp;&nbsp;: 2020</div>
+                <div>deskripsi fisik&nbsp;&nbsp;&nbsp;: 134 halaman</div>
+                <div><a href="{{ route('detail-jurnal.show', $jurnal->id) }}"><strong>Detail&raquo;&raquo;</strong></a></div>
+            </div>
+            </ul>
+  @endforeach
+  </div>
+
+</div>
+
+</section><!-- End Jurnal Section -->
 
  <!-- ======= Contact Section ======= -->
 <section id="contact" class="contact">

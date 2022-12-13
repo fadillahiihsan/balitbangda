@@ -239,6 +239,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+
+
 .header {
   transition: all 0.5s;
   z-index: 997;

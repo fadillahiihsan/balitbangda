@@ -10,8 +10,6 @@
     <title>Dashboard - Balitbangda</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/dashboard/">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
 
     
 
@@ -113,7 +111,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/berita">
+            <a class="nav-link" href="/berita">
               <span data-feather="file-text" class="align-text-bottom"></span>
               Berita
             </a>
@@ -125,11 +123,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/jurnal">
+            <a class="nav-link active" href="jurnal">
               <span data-feather="file" class="align-text-bottom"></span>
               Jurnal
             </a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="/" target="_blank">
               <span data-feather="chrome" class="align-text-bottom"></span>
@@ -148,86 +145,67 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Tambah Berita</h1>
+        <h1 class="h2">Tambah Jurnal</h1>
       </div>
-      <div class="container mt-5 mb-5">
+      <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <form action="{{ route('berita.update', $beritum->id) }}" method="POST" enctype="multipart/form-data">
-                            @csrf
-                            @method('PUT')
+                        <a href="{{ route('jurnal.create') }}" class="btn btn-md btn-success mb-3">TAMBAH JURNAL</a>
+                        <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">GAMBAR</th>
+                                <th scope="col">JUDUL</th>
+                                <th scope="col">PENERBIT</th>
+                                <th scope="col">NO ISSN/ISBN</th>
+                                <th scope="col">TAHUN TERBIT</th>
+                                <th scope="col">DESKRIPSI FISIK</th>
+                                <th scope="col">DESKRIPSI</th>
+                                <th scope="col">AKSI</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              @forelse ($jurnals as $jurnal)
+                                <tr>
+                                    <td>{{ $jurnal->id }}</td>
 
-                            <div class="form-group">
-                                <label class="font-weight-bold">GAMBAR</label>
-                                <input type="file" class="form-control" name="image">
-                            </div>
-
-                            <div class="form-group">
-                                <label class="font-weight-bold">JUDUL</label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title', $beritum->title) }}" placeholder="Masukkan Judul Berita">
-                            
-                                <!-- error message untuk title -->
-                                @error('title')
-                                    <div class="alert alert-danger mt-2">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
-
-                            <div class="form-group">
-                                <label class="font-weight-bold">KONTEN</label>
-                                <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Konten Berita">{{ old('content', $beritum->content) }}</textarea>
-                            
-                                <!-- error message untuk content -->
-                                @error('content')
-                                    <div class="alert alert-danger mt-2">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
-
-                            <div class="form-group">
-                                <label class="font-weight-bold">Tanggal</label>
-                                <input type="date" class="form-control @error('tanggal') is-invalid @enderror"
-                                name="tanggal" value="{{ old('tanggal', $beritum->tanggal) }}">
-
-                                @error('tanggal')
-                                    <div class="alert alert-danger mt-2">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
-
-                            <br>
-
-                            <button type="submit" class="btn btn-md btn-primary">UPDATE</button>
-                            <button type="reset" class="btn btn-md btn-warning">RESET</button>
-
-                        </form> 
+                                    <td class="text-center">
+                                        <img src="{{ Storage::url('public/images/').$jurnal->image }}" class="rounded" style="width: 150px">
+                                    </td>
+                                    <td>{{ $jurnal->title }}</td>
+                                    <td>{{ $jurnal->penerbit }}</td>
+                                    <td>{{ $jurnal->no }}</td>
+                                    <td>{{ $jurnal->tahun }}</td>
+                                    <td>{{ $jurnal->deskripsi }}</td>
+                                    <td>{!! $jurnal->content !!}</td>
+                                    <td class="text-center">
+                                        <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('jurnal.destroy', $jurnal->id) }}" method="POST">
+                                            <a href="{{ route('jurnal.edit', $jurnal->id) }}" class="btn btn-sm btn-primary">EDIT</a>
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                              @empty
+                                  <div class="alert alert-danger">
+                                      Data berita belum Tersedia.
+                                  </div>
+                              @endforelse
+                            </tbody>
+                          </table>  
+                          {{ $jurnals->links() }}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-      </div>
-    </main>
-  </div>
-</div>
 
 
     <script src="{{ asset ('/tema/dist/js/bootstrap.bundle.min.js') }}"></script>
-    
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="tema/js/dashboard.js"></script>
-    
-    <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
-    
-
-    <script>
-    CKEDITOR.replace( 'content' );
-    </script>
-
   </body>
 </html>
