@@ -50,8 +50,8 @@
               <li><a href="#">Sekapur Sirih</a></li>
               <li><a href="#">Data Kepala Badan</a></li>
               <li><a href="#">Mengenal Balitbangda Kalsel</a></li>
-              <li><a href="#">Visi Misi</a></li>
-              <li><a href="#">Tupoksi</a></li>
+              <li><a href="/visi-misi">Visi Misi</a></li>
+              <li><a href="/tupoksi">Tupoksi</a></li>
               <li><a href="#">Struktur Organisasi</a></li>
               <li><a href="#">Sumber Daya Insani</a></li>
               <li><a href="#">Peneliti</a></li>
@@ -74,7 +74,7 @@
               <li><a href="#">Forum Litbang</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="detail-jurnal">Jurnal</a></li>
+          <li><a class="nav-link scrollto" href="#jurnal">Jurnal & Laporan</a></li>
           <li><a class="nav-link scrollto" href="#portfolio">Galeri</a></li>
           <li class="dropdown"><a href="#"><span>Mitra</span> <i class="bi bi-chevron-down"></i></a>
             <ul>

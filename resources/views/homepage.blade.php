@@ -48,8 +48,8 @@ Badan Penelitan dan Pengembangan Daerah
         Adalah Perangkat Daerah yang melaksanakan fungsi penelitian dan pengembangan di bidang pemerintahan di daerah provinsi dan kabupaten/kota berdasarkan peraturan perUndang-Undangan.
         </p>
         <div class="text-center text-lg-start">
-          <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-            <span>Beranda</span>
+          <a href="tentang-kami" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+            <span>Detail</span>
             <i class="bi bi-arrow-right"></i>
           </a>
         </div>
@@ -154,16 +154,16 @@ img {
   <div class="row">
     <ul>
                 <div><img src="{{ Storage::url('public/images/').$jurnal->image }}" class="rounded" style="width: 150px" ></div>
-                <div>Judul&nbsp;&nbsp;&nbsp;: <strong>Jurnal Kebijakan Pembangunan Volume 15 No 1 Juni 2020</strong></div>
-                <div>No ISSN/ISBN&nbsp;&nbsp;&nbsp;: 2085-6091</div>
-                <div>Tahun terbit&nbsp;&nbsp;&nbsp;&nbsp;: 2020</div>
-                <div>deskripsi fisik&nbsp;&nbsp;&nbsp;: 134 halaman</div>
+                <div>Judul&nbsp;&nbsp;&nbsp;: <strong>{{ $jurnal->title }}</strong></div>
+                <div>No ISSN/ISBN&nbsp;&nbsp;&nbsp;: {{ $jurnal->no }}</div>
+                <div>Tahun terbit&nbsp;&nbsp;&nbsp;&nbsp;: {{ $jurnal->tahun }}</div>
+                <div>deskripsi fisik&nbsp;&nbsp;&nbsp;: {{ $jurnal->deskripsi }}</div>
                 <div><a href="{{ route('detail-jurnal.show', $jurnal->id) }}"><strong>Detail&raquo;&raquo;</strong></a></div>
             </div>
             </ul>
-  @endforeach
-  </div>
-
+          </div>
+          
+          @endforeach
 </div>
 
 </section><!-- End Jurnal Section -->

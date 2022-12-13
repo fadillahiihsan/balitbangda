@@ -9,11 +9,20 @@ use App\Models\Berita;
 
 // Home
 Route::get('/', [HomeController::class, 'index']);
+Route::get('tupoksi', function () {
+    return view('layouts.tupoksi');
+});
+Route::get('visi-misi', function () {
+    return view('layouts.visiMisi');
+});
+Route::get('tentang-kami', function () {
+    return view('layouts.tentangKami');
+});
 
 // Detail Berita
 Route::resource('detail-berita', DetailController::class);
 
-// Jurnal
+// Detail Jurnal
 Route::resource('detail-jurnal', DJurnalController::class);
 
 // Auth

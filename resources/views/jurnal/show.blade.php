@@ -146,10 +146,10 @@
             <div class="col-md-8">
                 <div class="height40"></div>                    
                 <div><img src="{{ Storage::url('public/images/').$jurnal->image }}" class="rounded" style="width: 250px" ></div>
-                <div>Judul&nbsp;&nbsp;&nbsp;: <strong>Jurnal Kebijakan Pembangunan Volume 15 No 1 Juni 2020</strong></div>
-                <div>No ISSN/ISBN&nbsp;&nbsp;&nbsp;: 2085-6091</div>
-                <div>Tahun terbit&nbsp;&nbsp;&nbsp;&nbsp;: 2020</div>
-                <div>Deskripsi fisik&nbsp;&nbsp;&nbsp;: 134 halaman</div>
+                <div>Judul&nbsp;&nbsp;&nbsp;: <strong>{{ $jurnal->title }}</strong></div>
+                <div>No ISSN/ISBN&nbsp;&nbsp;&nbsp;: {{ $jurnal->no }}</div>
+                <div>Tahun terbit&nbsp;&nbsp;&nbsp;&nbsp;: {{ $jurnal->tahun }}</div>
+                <div>Deskripsi fisik&nbsp;&nbsp;&nbsp;: {{ $jurnal->deskripsi }}</div>
                 <br>
                 <div class="btr bt-content">{!! $jurnal->content !!}</div>
             </div>
