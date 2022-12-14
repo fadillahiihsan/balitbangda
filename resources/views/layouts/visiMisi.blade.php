@@ -8,7 +8,7 @@ Visi & Misi
 <link href="https://balitbangda.kalselprov.go.id/wp-content/themes/balitbangda_red/favicon.png" rel="icon">
 <link href="https://balitbangda.kalselprov.go.id/wp-content/themes/balitbangda_red/favicon.png" rel="apple-touch-icon">
 
-<section id="recent-blog-posts" class="recent-blog-posts">
+<section id="visi-misi" class="visi-misi">
 
 <div class="container" data-aos="fade-up">
 

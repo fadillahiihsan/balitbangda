@@ -5,7 +5,7 @@
 Tentang Kami
 @endsection
 
-<section id="recent-blog-posts" class="recent-blog-posts">
+<section id="tentang-kami" class="tentang-kami">
 
 <div class="container" data-aos="fade-up">
 

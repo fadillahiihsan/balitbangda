@@ -129,6 +129,12 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="/peneliti">
+              <span data-feather="user" class="align-text-bottom"></span>
+              Peneliti
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="/" target="_blank">
               <span data-feather="chrome" class="align-text-bottom"></span>
               Lihat Website

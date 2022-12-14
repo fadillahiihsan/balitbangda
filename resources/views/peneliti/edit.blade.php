@@ -113,7 +113,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/berita">
+            <a class="nav-link " href="/berita">
               <span data-feather="file-text" class="align-text-bottom"></span>
               Berita
             </a>
@@ -125,13 +125,13 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/jurnal">
+            <a class="nav-link active" href="/jurnal">
               <span data-feather="file" class="align-text-bottom"></span>
               Jurnal
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/peneliti">
+            <a class="nav-link active" href="/peneliti">
               <span data-feather="user" class="align-text-bottom"></span>
               Peneliti
             </a>
@@ -154,34 +154,107 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Tambah Berita</h1>
+        <h1 class="h2">Tambah Peneliti</h1>
       </div>
       <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <form action="{{ route('galeri.update', $galeri->id) }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('peneliti.update', $peneliti->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
 
                             <div class="form-group">
-                                <label class="font-weight-bold">GAMBAR</label>
+                                <label class="font-weight-bold">FOTO</label>
                                 <input type="file" class="form-control" name="image">
                             </div>
 
                             <div class="form-group">
-                                <label class="font-weight-bold">JUDUL</label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title', $galeri->title) }}" placeholder="Masukkan Judul Berita">
+                                <label class="font-weight-bold">NO</label>
+                                <input type="text" class="form-control @error('no') is-invalid @enderror" name="no" value="{{ old('no', $peneliti->no) }}" placeholder="Masukkan Judul Berita">
                             
-                                <!-- error message untuk title -->
-                                @error('title')
+                                <!-- error message untuk no -->
+                                @error('no')
                                     <div class="alert alert-danger mt-2">
                                         {{ $message }}
                                     </div>
                                 @enderror
                             </div>
 
+                            <div class="form-group">
+                                <label class="font-weight-bold">NAMA</label>
+                                <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama" value="{{ old('nama', $peneliti->nama) }}" placeholder="Masukkan Judul Berita">
+                            
+                                <!-- error message untuk nama -->
+                                @error('nama')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">NIP</label>
+                                <input type="text" class="form-control @error('nip') is-invalid @enderror" name="nip" value="{{ old('nip', $peneliti->nip) }}" placeholder="Masukkan Judul Berita">
+                            
+                                <!-- error message untuk nip -->
+                                @error('nip')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">TTL</label>
+                                <input type="text" class="form-control @error('ttl') is-invalid @enderror" name="ttl" value="{{ old('ttl', $peneliti->ttl) }}" placeholder="Masukkan Judul Berita">
+                            
+                                <!-- error message untuk ttl -->
+                                @error('ttl')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">PANGKAT</label>
+                                <input type="text" class="form-control @error('pangkat') is-invalid @enderror" name="pangkat" value="{{ old('pangkat', $peneliti->pangkat) }}" placeholder="Masukkan Judul Berita">
+                            
+                                <!-- error message untuk pangkat -->
+                                @error('pangkat')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">JABATAN</label>
+                                <input type="text" class="form-control @error('jabatan') is-invalid @enderror" name="jabatan" value="{{ old('jabatan', $peneliti->jabatan) }}" placeholder="Masukkan Judul Berita">
+                            
+                                <!-- error message untuk jabatan -->
+                                @error('jabatan')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">KEPAKARAN</label>
+                                <input type="text" class="form-control @error('kepakaran') is-invalid @enderror" name="kepakaran" value="{{ old('kepakaran', $peneliti->kepakaran) }}" placeholder="Masukkan Judul Berita">
+                            
+                                <!-- error message untuk kepakaran -->
+                                @error('kepakaran')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <br>
 
                             <button type="submit" class="btn btn-md btn-primary">UPDATE</button>
                             <button type="reset" class="btn btn-md btn-warning">RESET</button>
@@ -200,9 +273,8 @@
 
 
     <script src="{{ asset ('/tema/dist/js/bootstrap.bundle.min.js') }}"></script>
-    
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="tema/js/dashboard.js"></script>
     
-
+   
   </body>
 </html>

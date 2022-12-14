@@ -67,7 +67,7 @@ Badan Penelitan dan Pengembangan Daerah
 
 
 <!-- ======= Recent Blog Posts Section ======= -->
-<section id="recent-blog-posts" class="recent-blog-posts">
+<section id="berita" class="berita">
 
 <div class="container" data-aos="fade-up">
 

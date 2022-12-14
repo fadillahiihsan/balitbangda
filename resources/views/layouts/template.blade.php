@@ -47,44 +47,40 @@
         <ul>
           <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Sekapur Sirih</a></li>
-              <li><a href="#">Data Kepala Badan</a></li>
-              <li><a href="#">Mengenal Balitbangda Kalsel</a></li>
+              <li><a href="/profilkaban">Data Kepala Badan</a></li>
+              <li><a href="/tentang-kami">Mengenal Balitbangda Kalsel</a></li>
               <li><a href="/visi-misi">Visi Misi</a></li>
-              <li><a href="/tupoksi">Tupoksi</a></li>
-              <li><a href="#">Struktur Organisasi</a></li>
-              <li><a href="#">Sumber Daya Insani</a></li>
-              <li><a href="#">Peneliti</a></li>
-              <li><a href="#">Rencana Strategis</a></li>
+              <li><a href="/tugas-pokok-dan-fungsi">Tupoksi</a></li>
+              <li><a href="/data-peneliti">Peneliti</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto" href="#berita">Berita</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Galeri</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
+          <li><a class="nav-link scrollto" href="#jurnal">Jurnal & Laporan</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#recent-blog-posts">Berita</a></li>
               <li><a href="#contact">Kontak</a></li>
-              <li><a href="#">Agenda</a></li>
-              <li><a href="#">Pengumuman</a></li>
             </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Pernik</span> <i class="bi bi-chevron-down"></i></a>
+          </li> -->
+          <!-- <li class="dropdown"><a href="#"><span>Pernik</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Penghargaan</a></li>
               <li><a href="#">Kerja Sama</a></li>
               <li><a href="#">Konsorium</a></li>
               <li><a href="#">Forum Litbang</a></li>
             </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#jurnal">Jurnal & Laporan</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Galeri</a></li>
-          <li class="dropdown"><a href="#"><span>Mitra</span> <i class="bi bi-chevron-down"></i></a>
+          </li> -->
+          <!-- <li class="dropdown"><a href="#"><span>Mitra</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Dewan Riset</a></li>
               <li><a href="#">Bappeda Kabupaten/Kota di Kalsel</a></li>
               <li><a href="#">Litbang Kementrian</a></li>
               <li><a href="#">Lemit Perguruan Tinggi</a></li>
             </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Sekretariat</span> <i class="bi bi-chevron-down"></i></a>
+          </li> -->
+          <!-- <li class="dropdown"><a href="#"><span>Sekretariat</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li class="dropdown"><a href="#"><span>Sekretariat</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
@@ -119,7 +115,7 @@
                 </ul>
               </li>
             </ul>
-          </li>
+          </li> -->
             
             <li><a class="getstarted scrollto" href="/login">Login</a></li>
         </ul>

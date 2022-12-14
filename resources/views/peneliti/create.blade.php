@@ -12,7 +12,6 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/dashboard/">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-
     
 
     
@@ -113,7 +112,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/berita">
+            <a class="nav-link" href="/berita">
               <span data-feather="file-text" class="align-text-bottom"></span>
               Berita
             </a>
@@ -131,7 +130,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/peneliti">
+            <a class="nav-link active" href="/peneliti">
               <span data-feather="user" class="align-text-bottom"></span>
               Peneliti
             </a>
@@ -154,36 +153,118 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Tambah Berita</h1>
+        <h1 class="h2">Tambah Peneliti</h1>
       </div>
       <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <form action="{{ route('galeri.update', $galeri->id) }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('peneliti.store') }}" method="POST" enctype="multipart/form-data">
+                        
                             @csrf
-                            @method('PUT')
 
                             <div class="form-group">
-                                <label class="font-weight-bold">GAMBAR</label>
-                                <input type="file" class="form-control" name="image">
-                            </div>
-
-                            <div class="form-group">
-                                <label class="font-weight-bold">JUDUL</label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title', $galeri->title) }}" placeholder="Masukkan Judul Berita">
+                                <label class="font-weight-bold">NO</label>
+                                <input type="text" class="form-control @error('no') is-invalid @enderror" name="no" value="{{ old('no') }}" placeholder="Masukkan Nomor">
                             
-                                <!-- error message untuk title -->
-                                @error('title')
+                                <!-- error message untuk nomor -->
+                                @error('no')
                                     <div class="alert alert-danger mt-2">
                                         {{ $message }}
                                     </div>
                                 @enderror
                             </div>
 
+                            <div class="form-group">
+                                <label class="font-weight-bold">FOTO</label>
+                                <input type="file" class="form-control @error('image') is-invalid @enderror" name="image">
+                            
+                                <!-- error message untuk foto -->
+                                @error('image')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
 
-                            <button type="submit" class="btn btn-md btn-primary">UPDATE</button>
+                            <div class="form-group">
+                                <label class="font-weight-bold">NAMA</label>
+                                <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama" value="{{ old('nama') }}" placeholder="Masukkan Nama Peneliti">
+                            
+                                <!-- error message untuk nama -->
+                                @error('nama')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">NIP</label>
+                                <input type="text" class="form-control @error('nip') is-invalid @enderror" name="nip" value="{{ old('nip') }}" placeholder="Masukkan NIP">
+                            
+                                <!-- error message untuk nip -->
+                                @error('nip')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">Tempat Tanggal Lahir</label>
+                                <input type="text" class="form-control @error('ttl') is-invalid @enderror" name="ttl" value="{{ old('ttl') }}" placeholder="Masukkan Tempat Tanggal Lahir">
+                            
+                                <!-- error message untuk ttl -->
+                                @error('ttl')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">PANGKAT/GOL</label>
+                                <input type="text" class="form-control @error('pangkat') is-invalid @enderror" name="pangkat" value="{{ old('pangkat') }}" placeholder="Masukkan Pangkat/Gol">
+                            
+                                <!-- error message untuk pangkat -->
+                                @error('pangkat')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">JABATAN</label>
+                                <input type="text" class="form-control @error('jabatan') is-invalid @enderror" name="jabatan" value="{{ old('jabatan') }}" placeholder="Masukkan Jabatan">
+                            
+                                <!-- error message untuk jabatan -->
+                                @error('jabatan')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">KEPAKARAN</label>
+                                <input type="text" class="form-control @error('kepakaran') is-invalid @enderror" name="kepakaran" value="{{ old('kepakaran') }}" placeholder="Masukkan Kepakaran">
+                            
+                                <!-- error message untuk kepakaran -->
+                                @error('kepakaran')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                           
+
+
+                                <br>
+                            <button type="submit" class="btn btn-md btn-primary">SIMPAN</button>
                             <button type="reset" class="btn btn-md btn-warning">RESET</button>
 
                         </form> 
@@ -192,17 +273,17 @@
             </div>
         </div>
     </div>
-    </div>
       </div>
     </main>
   </div>
 </div>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="{{ asset ('/tema/dist/js/bootstrap.bundle.min.js') }}"></script>
-    
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="tema/js/dashboard.js"></script>
-    
+
 
   </body>
 </html>

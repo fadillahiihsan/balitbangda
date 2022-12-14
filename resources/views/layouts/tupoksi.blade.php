@@ -5,7 +5,7 @@
 Tugas & Fungsi
 @endsection
 
-<section id="recent-blog-posts" class="recent-blog-posts">
+<section id="tupoksi" class="tupoksi">
 
 <div class="container" data-aos="fade-up">
 

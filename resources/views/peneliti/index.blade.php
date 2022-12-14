@@ -10,8 +10,6 @@
     <title>Dashboard - Balitbangda</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/dashboard/">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
 
     
 
@@ -113,7 +111,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/berita">
+            <a class="nav-link" href="/berita">
               <span data-feather="file-text" class="align-text-bottom"></span>
               Berita
             </a>
@@ -125,13 +123,13 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/jurnal">
+            <a class="nav-link" href="jurnal">
               <span data-feather="file" class="align-text-bottom"></span>
               Jurnal
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/peneliti">
+            <a class="nav-link active" href="jurnal">
               <span data-feather="user" class="align-text-bottom"></span>
               Peneliti
             </a>
@@ -154,55 +152,67 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Tambah Berita</h1>
+        <h1 class="h2">Tambah Peneliti</h1>
       </div>
-      <div class="container mt-5 mb-5">
+      <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <form action="{{ route('galeri.update', $galeri->id) }}" method="POST" enctype="multipart/form-data">
-                            @csrf
-                            @method('PUT')
+                        <a href="{{ route('peneliti.create') }}" class="btn btn-md btn-success mb-3">TAMBAH PENELITI</a>
+                        <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col">NO</th> 
+                                <th scope="col">FOTO</th>
+                                <th scope="col">NAMA</th>
+                                <th scope="col">NIP</th>
+                                <th scope="col">TTL</th>
+                                <th scope="col">PANGKAT</th>
+                                <th scope="col">JABATAN</th>
+                                <th scope="col">KEPAKARAN</th>
+                                <th scope="col">AKSI</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              @forelse ($peneliti as $penelitis)
+                                <tr>
+                                    <td>{{ $penelitis->id }}</td>
 
-                            <div class="form-group">
-                                <label class="font-weight-bold">GAMBAR</label>
-                                <input type="file" class="form-control" name="image">
-                            </div>
-
-                            <div class="form-group">
-                                <label class="font-weight-bold">JUDUL</label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title', $galeri->title) }}" placeholder="Masukkan Judul Berita">
-                            
-                                <!-- error message untuk title -->
-                                @error('title')
-                                    <div class="alert alert-danger mt-2">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
-
-
-                            <button type="submit" class="btn btn-md btn-primary">UPDATE</button>
-                            <button type="reset" class="btn btn-md btn-warning">RESET</button>
-
-                        </form> 
+                                    <td class="text-center">
+                                        <img src="{{ Storage::url('public/images/').$penelitis->image }}" class="rounded" style="width: 100px">
+                                    </td>
+                                    <td>{{ $penelitis->nama }}</td>
+                                    <td>{{ $penelitis->nip }}</td>
+                                    <td>{{ $penelitis->ttl }}</td>
+                                    <td>{{ $penelitis->pangkat }}</td>
+                                    <td>{{ $penelitis->jabatan }}</td>
+                                    <td>{{ $penelitis->kepakaran }}</td>
+                                    <td class="text-center">
+                                    <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('peneliti.destroy', $penelitis->id) }}" method="POST">
+                                            <a href="{{ route('peneliti.edit', $penelitis->id) }}" class="btn btn-sm btn-primary">EDIT</a>
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                              @empty
+                                  <div class="alert alert-danger">
+                                      Data berita belum Tersedia.
+                                  </div>
+                              @endforelse
+                            </tbody>
+                          </table>  
+                          {{ $peneliti->links() }}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-      </div>
-    </main>
-  </div>
-</div>
 
 
     <script src="{{ asset ('/tema/dist/js/bootstrap.bundle.min.js') }}"></script>
-    
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="tema/js/dashboard.js"></script>
-    
-
   </body>
 </html>
