@@ -47,17 +47,17 @@
         <ul>
           <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="/profilkaban">Data Kepala Badan</a></li>
-              <li><a href="/tentang-kami">Mengenal Balitbangda Kalsel</a></li>
-              <li><a href="/visi-misi">Visi Misi</a></li>
-              <li><a href="/tugas-pokok-dan-fungsi">Tupoksi</a></li>
-              <li><a href="/data-peneliti">Peneliti</a></li>
+              <li><a href="{{ url('profilkaban') }}">Data Kepala Badan</a></li>
+              <li><a href="{{ url('/tentang-kami') }}">Mengenal Balitbangda Kalsel</a></li>
+              <li><a href="{{ url('/visi-misi') }}">Visi Misi</a></li>
+              <li><a href="{{ url('/tugas-pokok-dan-fungsi') }}">Tupoksi</a></li>
+              <li><a href="{{ url('/data-peneliti') }}">Peneliti</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#berita">Berita</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Galeri</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
-          <li><a class="nav-link scrollto" href="#jurnal">Jurnal & Laporan</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('/#berita') }}">Berita</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('/#portfolio') }}">Galeri</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('/#contact') }}">Kontak</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('/#jurnal') }}">Jurnal & Laporan</a></li>
           <!-- <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#recent-blog-posts">Berita</a></li>
@@ -117,7 +117,7 @@
             </ul>
           </li> -->
             
-            <li><a class="getstarted scrollto" href="/login">Login</a></li>
+            <li><a class="getstarted scrollto" href="{{ url('/login') }}">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

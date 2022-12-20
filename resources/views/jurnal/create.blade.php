@@ -95,7 +95,7 @@
   <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search">
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="/logout">Sign out</a>
+      <a class="nav-link px-3" href="{{ url('/logout') }}">Sign out</a>
     </div>
   </div>
 </header>
@@ -106,43 +106,43 @@
       <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="/dashboard">
+            <a class="nav-link " aria-current="page" href="{{ url('/dashboard') }}">
               <span data-feather="home" class="align-text-bottom"></span>
               Dashboard
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/berita">
+            <a class="nav-link" href="{{ url('/berita') }}">
               <span data-feather="file-text" class="align-text-bottom"></span>
               Berita
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/galeri">
+            <a class="nav-link" href="{{ url('/galeri') }}">
               <span data-feather="image" class="align-text-bottom"></span>
               Galeri
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/jurnal">
+            <a class="nav-link active" href="{{ url('/jurnal') }}">
               <span data-feather="file" class="align-text-bottom"></span>
               Jurnal
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/peneliti">
+            <a class="nav-link" href="{{ url('/peneliti') }}">
               <span data-feather="user" class="align-text-bottom"></span>
               Peneliti
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/" target="_blank">
+            <a class="nav-link" href="{{ url('/') }}" target="_blank">
               <span data-feather="chrome" class="align-text-bottom"></span>
               Lihat Website
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/logout">
+            <a class="nav-link" href="{{ url('/logout') }}">
               <span data-feather="log-out" class="align-text-bottom"></span>
               Log Out
             </a>

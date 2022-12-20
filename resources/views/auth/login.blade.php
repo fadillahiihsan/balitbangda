@@ -79,7 +79,7 @@
     
 <main class="form-signin w-100 m-auto">
   
-  <a href="/">
+  <a href="{{ url('/') }}">
   <img class="mb-4" src="tema/img/logo-kalsel.png" alt="" width="72" height="80"></a>
   <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 

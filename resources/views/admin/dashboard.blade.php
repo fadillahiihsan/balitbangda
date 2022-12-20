@@ -101,37 +101,37 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/berita">
+            <a class="nav-link" href="{{ url('/berita') }}">
               <span data-feather="file-text" class="align-text-bottom"></span>
               Berita
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/galeri">
+            <a class="nav-link" href="{{ url('/galeri') }}">
               <span data-feather="image" class="align-text-bottom"></span>
               Galeri
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="jurnal">
+            <a class="nav-link" href="{{ url('jurnal') }}">
               <span data-feather="file" class="align-text-bottom"></span>
               Jurnal
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="peneliti">
+            <a class="nav-link" href="{{ url('peneliti') }}">
               <span data-feather="user" class="align-text-bottom"></span>
               Peneliti
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/" target="_blank">
+            <a class="nav-link" href="{{ url('/') }}" target="_blank">
               <span data-feather="chrome" class="align-text-bottom"></span>
               Lihat Website
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/logout">
+            <a class="nav-link" href="{{ url('/logout') }}">
               <span data-feather="log-out" class="align-text-bottom"></span>
               Log Out
             </a>

@@ -51,81 +51,19 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
+        <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Sekapur Sirih</a></li>
-              <li><a href="#">Data Kepala Badan</a></li>
-              <li><a href="#">Mengenal Balitbangda Kalsel</a></li>
-              <li><a href="#">Visi Misi</a></li>
-              <li><a href="#">Tupoksi</a></li>
-              <li><a href="#">Struktur Organisasi</a></li>
-              <li><a href="#">Sumber Daya Insani</a></li>
-              <li><a href="#">Peneliti</a></li>
-              <li><a href="#">Rencana Strategis</a></li>
+              <li><a href="{{ url('profilkaban') }}">Data Kepala Badan</a></li>
+              <li><a href="{{ url('/tentang-kami') }}">Mengenal Balitbangda Kalsel</a></li>
+              <li><a href="{{ url('/visi-misi') }}">Visi Misi</a></li>
+              <li><a href="{{ url('/tugas-pokok-dan-fungsi') }}">Tupoksi</a></li>
+              <li><a href="{{ url('/data-peneliti') }}">Peneliti</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="/#recent-blog-posts">Berita</a></li>
-              <li><a href="#contact">Kontak</a></li>
-              <li><a href="#">Agenda</a></li>
-              <li><a href="#">Pengumuman</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Pernik</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Penghargaan</a></li>
-              <li><a href="#">Kerja Sama</a></li>
-              <li><a href="#">Konsorium</a></li>
-              <li><a href="#">Forum Litbang</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="http://127.0.0.1:8000/detail-jurnal">Jurnal</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Galeri</a></li>
-          <li class="dropdown"><a href="#"><span>Mitra</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Dewan Riset</a></li>
-              <li><a href="#">Bappeda Kabupaten/Kota di Kalsel</a></li>
-              <li><a href="#">Litbang Kementrian</a></li>
-              <li><a href="#">Lemit Perguruan Tinggi</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Sekretariat</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li class="dropdown"><a href="#"><span>Sekretariat</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Artikel</a></li>
-                  <li><a href="#">Kegiatan</a></li>
-                  <li><a href="#">Serba-Serbi</a></li>
-                </ul>
-                <li class="dropdown"><a href="#"><span>Bxidang Ekonomi, SDA dan Teknologi</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Hasil Penelitian dan Pengembangan</a></li>
-                  <li><a href="#">Artikel</a></li>
-                  <li><a href="#">Kegiatan</a></li>
-                  <li><a href="#">Serba-Serbi</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="#"><span>Bidang Pemerintahan</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Hasil Penelitian dan Pengembangan</a></li>
-                  <li><a href="#">Artikel</a></li>
-                  <li><a href="#">Kegiatan</a></li>
-                  <li><a href="#">Serba-Serbi</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="#"><span>Bidang Sosial Budaya</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Hasil Penelitian dan Pengembangan</a></li>
-                  <li><a href="#">Artikel</a></li>
-                  <li><a href="#">Kegiatan</a></li>
-                  <li><a href="#">Serba-Serbi</a></li>
-                  <li><a href="#">Jarit Bidang Pendidikan</a></li>
-                  <li><a href="#">Jarit Bidang Kesehatan</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
+          <li><a class="nav-link scrollto" href="{{ url('/#berita') }}">Berita</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('/#portfolio') }}">Galeri</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('/#contact') }}">Kontak</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('/#jurnal') }}">Jurnal & Laporan</a></li>
             <li><a class="getstarted scrollto" href="/login">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

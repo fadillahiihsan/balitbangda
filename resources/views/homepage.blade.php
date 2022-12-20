@@ -67,7 +67,7 @@ Badan Penelitan dan Pengembangan Daerah
 
 
 <!-- ======= Recent Blog Posts Section ======= -->
-<section id="berita" class="berita">
+<section id="berita" class="recent-blog-posts berita">
 
 <div class="container" data-aos="fade-up">
 
@@ -82,7 +82,8 @@ Badan Penelitan dan Pengembangan Daerah
 
     <div class="col-lg-4">
       <div class="post-box">
-        <div class="post-img"><img src="{{ Storage::url('public/images/').$berita->image }}" class="img-fluid" alt=""></div>
+        <div class="post-img"><img src="{{ Storage::url('public/images/').$berita->image }}" alt="" width= "100%"
+    height="300px"></div>
         <span class="post-date">{{ $berita->tanggal }}</span>
         <h3 class="post-title">{{ $berita->title }}</h3>
         <a href="{{ route('detail-berita.show', $berita->id) }}" class="readmore stretched-link mt-auto"><span>Baca Lebih Lanjut</span><i class="bi bi-arrow-right"></i></a>
@@ -112,7 +113,8 @@ Badan Penelitan dan Pengembangan Daerah
 
     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
       <div class="portfolio-wrap">
-        <img src="{{ Storage::url('public/images/').$galeri->image }}" class="img-fluid" alt="">
+        <img src="{{ Storage::url('public/images/').$galeri->image }}" width="100%"
+    height="250px" alt="">
         <div class="portfolio-info">
           <h4>{{ $galeri->title }}</h4>
           <div class="portfolio-links">
